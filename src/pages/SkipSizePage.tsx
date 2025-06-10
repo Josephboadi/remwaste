@@ -154,7 +154,7 @@ export default function SkipSizePage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-100 to-white dark:from-gray-900 dark:to-gray-950 text-gray-900 dark:text-white transition-colors duration-300 p-6 ">
       <Progress activeStep="Select Skip" progressSteps={progressSteps} />
 
-      <div className="max-w-7xl mx-auto pt-22 ">
+      <div className="max-w-7xl mx-auto pt-44 md:pt-28 lg:pt-24 ">
         <div className="text-center mb-8">
           <motion.h2
             initial={{ opacity: 0, y: -20 }}

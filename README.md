@@ -28,7 +28,8 @@ This project is built using React + TypeScript + Vite + Tailwind Css. It is buil
 * Docker approach:
   - The project has been dockerized and a docker image has been built and push to dockerhub.
   - You can simple access the image from `jboadi/remwaste:stable`
-  - And you can spin up a container with the environment variables provided at the bottom.
+  - And you can spin up a container with the following image; `jboadi/remwaste:stable` on port `80`.
+  - Then you run `http:localhost:80` to access the page.
 
 * Github approach:
   - You can clone the github repository using the following command; `git clone https://github.com/Josephboadi/remwaste.git`
