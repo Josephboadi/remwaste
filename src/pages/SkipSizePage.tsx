@@ -143,11 +143,20 @@ export default function SkipSizePage() {
   ];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const storeSelected = (data: any) => {
-    setSelectedSize(data.size.toString());
-    setSelectedPrize(data.price.toString());
-    setSelectedHirePeriod(data.period.toString());
-    localStorage.setItem('selectedPrize', data.price.toString());
-    localStorage.setItem('selectedHirePeriod', data.period.toString());
+    if (data.size.toString() === selectedSize && data.price.toString() === selectedPrize && data.period.toString() === selectedHirePeriod) {
+      setSelectedSize('');
+      setSelectedPrize('');
+      setSelectedHirePeriod('');
+      localStorage.removeItem('selectedSize');
+      localStorage.removeItem('selectedPrize');
+      localStorage.removeItem('selectedHirePeriod');
+    } else {
+      setSelectedSize(data.size.toString());
+      setSelectedPrize(data.price.toString());
+      setSelectedHirePeriod(data.period.toString());
+      localStorage.setItem('selectedPrize', data.price.toString());
+      localStorage.setItem('selectedHirePeriod', data.period.toString());
+    }
   };
 
   return (
@@ -316,7 +325,7 @@ export default function SkipSizePage() {
           </div>
         </div>
 
-        {formattedSkips.length > 0 && (
+        {selectedSize && formattedSkips.length > 0 && (
           <div className="fixed bottom-0 left-0 w-full bg-white/20 backdrop-blur-lg dark:bg-gray-900/30 border-t border-white/30 dark:border-gray-700/40 px-6 py-4 z-50 ">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
               {!selectedSize ? (
