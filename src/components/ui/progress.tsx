@@ -44,7 +44,7 @@ export const Progress = ({ activeStep, progressSteps }: ProgressProps) => {
               </div>
 
               {/* Label on the line */}
-              <span className="text-xs text-gray-200 mt-2 text-center">{step.label}</span>
+              <span className="text-xs dark:text-gray-200 mt-2 text-center">{step.label}</span>
             </div>
           );
         })}

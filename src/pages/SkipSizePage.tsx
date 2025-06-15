@@ -331,7 +331,7 @@ export default function SkipSizePage() {
               {!selectedSize ? (
                 <p>No skip selected</p>
               ) : (
-                <div className="text-sm text-white font-medium text-center md:text-left flex flex-row items-end gap-2">
+                <div className="text-sm dark:text-white font-medium text-center md:text-left flex flex-row items-end gap-2">
                   <p className="text-lg font-bold drop-shadow-md">{`${selectedSize} Yard Skip`}</p>
                   <p className="text-lg">|</p>
                   <p className="text-xl font-bold text-blue-400 drop-shadow-md">{`£${selectedPrize}`}</p>
